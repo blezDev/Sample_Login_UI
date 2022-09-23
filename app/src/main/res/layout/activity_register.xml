@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_dark"
+        tools:context=".model.register.RegisterActivity">
+
+        <EditText
+            android:id="@+id/ed_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:drawableLeft="@drawable/ic_user_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="@color/dark_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginText" />
+
+        <EditText
+            android:id="@+id/ed_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:drawableLeft="@drawable/ic_lock_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="@color/dark_gray"
+            app:layout_constraintEnd_toEndOf="@+id/ed_email"
+            app:layout_constraintStart_toStartOf="@+id/ed_email"
+            app:layout_constraintTop_toBottomOf="@+id/ed_email" />
+
+        <EditText
+            android:id="@+id/ed_repassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:drawableLeft="@drawable/ic_lock_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Re - Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="@color/dark_gray"
+            app:layout_constraintEnd_toEndOf="@+id/ed_email"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ed_email"
+            app:layout_constraintTop_toBottomOf="@+id/ed_password" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/registerBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/roundshape"
+            android:text="Register"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ed_repassword"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ed_repassword"
+            app:layout_constraintTop_toBottomOf="@+id/ed_repassword" />
+
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:lines="2"
+            android:text="New \nAccount "
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.177"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:rippleColor="@color/light_dark"
+            app:backgroundTint="@color/light_dark"
+            android:backgroundTint="@color/light_dark"
+            app:layout_constraintBottom_toTopOf="@+id/loginText"
+            app:layout_constraintEnd_toEndOf="@+id/loginText"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/back_button"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_left_arrow_24" />
+
+        <TextView
+            android:id="@+id/errorMessageRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="Username Already Exist"
+            android:textColor="@color/red"
+            app:layout_constraintBottom_toTopOf="@+id/registerBtn"
+            app:layout_constraintEnd_toEndOf="@+id/ed_repassword"
+            app:layout_constraintStart_toStartOf="@+id/ed_repassword"
+            app:layout_constraintTop_toBottomOf="@+id/ed_repassword" />
+
+        <TextView
+            android:id="@+id/existingloginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Not the first time Here? Login Here"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/registerBtn"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="@+id/registerBtn"
+            app:layout_constraintTop_toBottomOf="@+id/registerBtn"
+            app:layout_constraintVertical_bias="0.135" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/ed_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.786"
+            app:layout_constraintStart_toEndOf="@+id/loginText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.329"
+            app:srcCompat="@drawable/cat_stare" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

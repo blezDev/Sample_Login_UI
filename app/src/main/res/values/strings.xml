@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LoginPage</string>
+    <string name="back_button">Back Button</string>
+    <string name="login_hyperlink">Back Button</string>
+    <!-- to toggle the open close button of the navigation drawer -->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="menu_settings">Menu Settings</string>
+</resources>
